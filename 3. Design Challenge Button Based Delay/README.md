@@ -1,8 +1,2 @@
 # Deliverables
-You will need to upload your code, well documented. You will also need a README for your code (you can replace this README) which will tell the user:
-- How does your code work?
-- How are the peripherals configured (what modes, what settings)?
-- What design considerations did you have to take to account for things like the timer rollover?
-- How should the user use your code?
-
-The code works by using the button on pin 2.3 to change the speed of the blinking LED.
+The code works by using the button on pin 2.3 to change the speed of the blinking LED. Depending on how long the button is held down, determines how fast the LED will blink. If the LED is held down for a second. The LED will blink once every second. This was achieved by using two different interrupts. One was for the timer and the other was for port 2. In the timer interrupt, the speed increases as the button is held in. In the port 2 interrupt, it checks if it is a rising or falling edge. During a rising edge of the button, the LED will be on. The opposite during the falling edge.
